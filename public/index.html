@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
  <head>
    <link rel='favicon' href='favicon.ico' type='image/x-icon'>
@@ -6,7 +7,20 @@
    <title>nptel player</title>
  </head>
  <body>
+   <div class='loader'>
+       <img src="images/octocat.jpg" style="width:20%;margin-left:40%;margin-top:20%;border-radius:50%;">
+       <div style='color:white;'>preparing your video just a sec ...</div>
+   </div>     
    <div class="container">
+       <div class="top" id='top'>
+           <span>I want to study </span>
+           <select id='subjects' onchange="getvideos(this.value)"></select>
+           <select id='videos' onchange="firevideo(this.value)"></select>
+           <i class="ti-headphone-alt" onclick="relax()"></i>
+       </div>
+       <div class="videocont" id='videocont'>
+           <video src="" id='player'></video>
+       </div>
    </div>     
    <script src='js/jquery.js'></script>
    <script src='js/index.js'></script>
