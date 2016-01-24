@@ -1,0 +1,15 @@
+{
+  "name": "nptelplayer",
+  "version": "0.0.0",
+  "description": "a customizable open source player for watching nptel videos , with a fresh design and some handy controls  ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "sourab reddy",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.3",
+    "nodemon": "~1.8.1"
+  }
+}
