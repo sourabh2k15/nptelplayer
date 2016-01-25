@@ -18,4 +18,4 @@ enjoy!!!
 
 #feautures
 
-the player has an analog speed range bar, as some NPTEL videos are too slow and gruellingly long :) ! 
+the player has an analog speed range bar, as some NPTEL videos are too slow and long to watch, but contain good knowledge :) ! 
