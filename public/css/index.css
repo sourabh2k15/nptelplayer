@@ -1,6 +1,7 @@
 *{ margin:0;padding:0;font-family: 'SEGOE UI',Ubuntu,roboto,'Open Sans';font-size:100%;box-sizing: border-box;}
 body{
   background: black;
+    overflow: hidden;
 }
 .loader{
     background: black;
@@ -44,6 +45,7 @@ body{
 }
 
 select{
+    background: white;
     outline:none;
     border:none;
     margin-left: 1%;
@@ -72,6 +74,90 @@ select#videos{ width:50%;}
     display:none;
 }
 
-video {
-    width:600px;
+video#player {
+    width:60%;
+    height: 85%;
+    margin-left: 20%;
+    margin-top: 2%;
+    z-index: -1;
 }
+div#fullscreen{
+    padding: 1%;
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+    font-size: 1em;
+    background:black;
+    cursor: pointer;
+    border:2px solid #FFEB3B;
+    border-radius: 50%;
+    color:#FFEB3B;
+    -webkit-transition: all 0.3s ease;
+}
+
+div#fullscreen:hover{
+    background: #FFEB3B;
+    color: black;
+}
+
+div#controls{
+    background: black;
+    color: #FFEB3B;
+    float: left;
+    width:60%;
+    font-size: 1.5em;
+    z-index: 20;
+    margin-top: 1%;
+    margin-left: 24%;
+}
+
+div#controls i{
+    float: left;
+    cursor: pointer;
+}
+
+div#controls input[type='range']{
+  float: left; 
+    margin-top: 10px;
+}
+
+input[type=range] {
+  outline: none;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 10%; /* Specific width is required for Firefox. */
+  border:1px solid yellow;
+  padding: 0;
+  height: 8px;
+  border-radius: 10px;
+  background: yellow;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 20px;
+  border:2px solid yellow;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+#time{
+    width:50%;
+    margin-left: 2%;
+    margin-right: 3%;
+}
+
+#time-verbose{
+    margin-left: 3%;
+}
+
+#speed{ margin-left: 2%;}
+

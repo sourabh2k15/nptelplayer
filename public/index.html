@@ -11,7 +11,7 @@
        <img src="images/octocat.jpg" style="width:20%;margin-left:40%;margin-top:20%;border-radius:50%;">
        <div style='color:white;'>preparing your video just a sec ...</div>
    </div>     
-   <div class="container">
+   <div class="container" id='container'>
        <div class="top" id='top'>
            <span>I want to study </span>
            <select id='subjects' onchange="getvideos(this.value)"></select>
@@ -19,9 +19,17 @@
            <i class="ti-headphone-alt" onclick="relax()"></i>
        </div>
        <div class="videocont" id='videocont'>
-           <video src="" id='player'></video>
+           <div id='fullscreen' onclick="screen();"><i class='ti-layout-slider-alt'></i></div>
+           <video autoplay src="videos/digital image processing/videos/nptel/Lecture 1 Introduction to Digital Image Processing.mp4" id='player'></video>
+           <div id='controls'>
+               <span id='play' style="display:none;" onclick="play();"><i class="ti-control-play"></i></span>
+               <span id='pause' onclick="pause();"><i class='ti-control-pause'></i></span>
+                <span><input type='range' id='time' value=0; onchange='setvideo(this.value)'/></span>
+               <i class="ti-timer" style='margin-right:-2%;margin-left:2%;'></i><span id='time-verbose' style='float:left;font-size:0.8em;'>00:00</span>
+               <span><i class="ti-bolt-alt" style='margin-right:-2%;margin-left:3%;'></i><input type='range' id='speed' onchange='speedup(this.value)'/></span>
+           </div>
        </div>
-   </div>     
+   </div>
    <script src='js/jquery.js'></script>
    <script src='js/index.js'></script>
  </body>
